@@ -177,7 +177,7 @@ body {
   h1 {
     position: absolute;
     right: 20%;
-    top: 40%;
+    top: 53%;
     font-size: 32px !important;
   }
   
@@ -185,14 +185,14 @@ body {
     font-size: 20px !important;
     color: white;
     right: 18%;
-    top: 45%;
-    margin-left: 33px;
+    top: 59%;
+    margin-left: 40px;
   }
   
   .logos {
     position: absolute !important;
-    margin-left: 25%;
-    margin-top: 110%;
+    margin-left: 15%;
+    margin-top: 80%;
   }
 
   
@@ -202,7 +202,7 @@ body {
   .free {
     width: 50px;
     margin-top: 20%;
-    margin-right: 50px;
+    margin-right: 30px;
   }
   
   .call {

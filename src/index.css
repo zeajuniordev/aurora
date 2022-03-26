@@ -1,38 +1,44 @@
 body {
-  font-family: "Play", sans-serif;
+  font-family: "Play", sans-serif !important;
+  background: linear-gradient(-10deg, #090729, #0f5774, #3c1888, #4b229b);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 8%;
+}
+
+.text{
+  text-align: center;
+  color: white;
 }
 
 h1 {
-  color: white;
-  position: absolute;
-  right: 33%;
-  bottom: 25%;
-  font-family: "Play", sans-serif;
+  margin-top: 0!important;
   font-weight: bold !important;
-  font-size: 60px !important;
+  font-size: 60px;
+}
+
+span{
+  margin-left: 3px;
 }
 
 h2 {
-  font-family: "Play", sans-serif;
   font-size: 20px !important;
-  color: white;
-  position: absolute;
-  text-align: center;
-  right: 29%;
-  top: 73%;
 }
 
 .logo {
-  right: 41%;
-  bottom: 39%;
-  position: absolute;
   width: 289px;
 }
 
 .logos {
-  position: relative !important;
-  margin-left: 36%;
-  margin-top: 13%;
+  margin-top: 2%;
 }
 
 .clash,
@@ -40,8 +46,6 @@ h2 {
 .fornite,
 .free {
   width: 50px;
-  margin-top: 38%;
-  margin-right: 50px;
 }
 
 .call {
@@ -49,203 +53,49 @@ h2 {
   color: #faed78;
 }
 
-@keyframes fly {
-  100% {
-    transform: rotate(1turn) translate(100px) rotate(-1turn);
+.dot1 {
+  margin-top: 0!important;
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+.dot2 {
+  margin-top: 0!important;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+.dot3 {
+  margin-top: 0!important;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+
+  to{
+    font-size: 20px;
   }
 }
 
-@keyframes flyPlus {
-  100% {
-    transform: rotate(-1turn) translate(100px) rotate(1turn);
-  }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-@keyframes flyPlusMobile {
-  100% {
-    transform: rotate(1turn) translate(100px) rotate(-1turn);
-  }
-}
-
-
-@keyframes dot {
-  25% {
-    border-color: transparent;
-    background-color: transparent;
-  }
-  50% {
-    border-right-color: transparent;
-    background-color: transparent;
-  }
-  75% {
-    border-right-color: transparent;
-  }
-}
-
-@-webkit-keyframes dot {
-  25% {
-    border-color: transparent;
-    background-color: transparent;
-  }
-  50% {
-    border-right-color: transparent;
-    background-color: transparent;
-  }
-  75% {
-    border-right-color: transparent;
-  }
-}
-
-.dotting {
-  animation: dot 4s infinite step-start both;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0) !important;
-  /* position: absolute; */
-  overflow: hidden;
-}
-
-.base {
-  position: absolute;
-  filter: blur(60px);
-  opacity: 0.8;
-}
-
-.one {
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  background-color: #04004291;
-  left: -40px;
-  top: -300px;
-  z-index: 9;
-  animation: fly 12s infinite;
-  transform: rotate(30px) translate(90px) rotate(10px);
-}
-
-.two {
-  width: 100%;
-  height: 100%;
-  background-color: #076d9685;
-  bottom: -30px;
-  animation: fly 12s infinite;
-  left: -80px;
-}
-
-.three {
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  bottom: -80px;
-  right: -100px;
-  background-color: #6421f571;
-  animation: flyPlus 10s infinite;
-  transform: rotate(0) translate(200px) rotate(0);
-}
-
-/* Tablest */
-@media (max-width: 767.98px) {
-  /* body {
-    overflow: auto;
-  }
-
-  h2 {
-    color: white;
-    position: absolute;
-    text-align: center;
-    right: 37%;
-    bottom: 18%;
-  } */
-}
-
-@media (max-width: 575.98px) { 
-
-  body{
-    overflow: hidden;
-  }
-
-  .logo {
-    right: 28%;
-    top: 15%;
-    position: absolute;
-    width: 200px;
-  }
-
-  h1 {
-    position: absolute;
-    right: 20%;
-    top: 53%;
-    font-size: 32px !important;
-  }
+@media (max-width: 767.98px) { 
   
-  h2 {
-    font-size: 20px !important;
-    color: white;
-    right: 18%;
-    top: 59%;
-    margin-left: 40px;
-  }
-  
-  .logos {
-    position: absolute !important;
-    margin-left: 15%;
-    top: 60%;
-  }
-
-  
-  .clash,
-  .call,
-  .fornite,
-  .free {
-    width: 50px;
-    margin-top: 20%;
-    margin-right: 30px;
-  }
-  
-  .call {
-    mix-blend-mode: normal;
-    color: #faed78;
-  }
-  
-  .dotting {
-    animation: dot 4s infinite step-start both;
-  }
-
-  .wrapper{
-    width: 50%;
-  }
-  
-  .base {
-    position: absolute;
-    filter: blur(60px);
-    opacity: 0.8;
-  }
-  
-  .one {
-    left: -40px;
-    z-index: 9;
-    animation: fly 12s infinite;
-    transform: rotate(20px) translate(50px) rotate(0);
-  }
-  
-  .two {
-    bottom: -10px;
-    animation: fly 12s infinite;
-    left: -10px;
-  }
-  
-  .three {
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-    bottom: -10px;
-    right: 0px !important;
-    background-color: #6421f571;
-    animation: flyPlusMobile 10s infinite;
-    transform: rotate(0) translate(30px) rotate(0);
-  }
-  
+.wrapper{
+  padding-top: 25%;
 }
+ }
